@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@findAll');
+Route::post('/', 'HomeController@addItem');
+Route::get('/delete/{ID}', 'HomeController@deleteItem');
+Route::post('/pesquisar', 'HomeController@findByName');
